@@ -1,0 +1,38 @@
+/*
+ * Copyright (c) 2014 GE Global Research. All rights reserved.
+ *
+ * The copyright to the computer software herein is the property of
+ * GE Global Research. The software may be used and/or copied only
+ * with the written permission of GE Global Research or in accordance
+ * with the terms and conditions stipulated in the agreement/contract
+ * under which the software has been supplied.
+ */
+
+// Settings
+
+// Tools
+
+// Generic
+
+// Base
+
+// Meta
+
+// Objects
+
+// Component
+:host {
+  --px-dropdown-item-icon-size: 22px;
+  --px-dropdown-item-padding: 20px;
+  --px-dropdown-item-height: 4rem;
+  --px-dropdown-border-color: var(--px-product-switcher-border-color, #0C1419);
+  --px-dropdown-text-color: var(--px-product-switcher-text-color, #B6C3CC);
+  --px-dropdown-text-color--selected: var(--px-product-switcher-text-color--selected, #B6C3CC);
+  --px-dropdown-bg-color: var(--px-product-switcher-background-color, #0C1419);
+  --px-dropdown-bg-color--hover: var(--px-product-switcher-background-color--hover, #121F26);
+  --px-dropdown-bg-color--selected: var(--px-product-switcher-background-color--selected, #09819C);
+  --px-dropdown-bg-color--selected--mobile: var(--px-product-switcher-background-color--selected--mobile, #1B2A33);
+  --px-dropdown-max-height: 40rem;
+}
+
+// Trumps

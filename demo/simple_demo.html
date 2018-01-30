@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>px-product-switcher simple demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../../polymer/polymer.html" />
+  <link rel="import" href="../../px-app-nav/px-app-nav.html" />
+  <link rel="import" href="../px-product-switcher.html" />
+  <link rel="import" href="../../px-theme/px-theme-styles.html">
+
+</head>
+
+<body>
+  <custom-style>
+    <style include="px-theme-styles" is="custom-style"></style>
+  </custom-style>
+  <px-app-nav
+      items='[
+        { "label" : "Home", "id" : "home", "icon" : "px-fea:home" },
+        { "label" : "Alerts", "id" : "alerts", "icon" : "px-fea:alerts" },
+        { "label" : "Dashboards", "id" : "dashboards", "icon" : "px-fea:dashboard", "children": [
+          { "label" : "See Live Truck View", "id" : "trucks", "icon" : "px-obj:truck" },
+          { "label" : "Track Orders", "id" : "orders", "icon" : "px-fea:orders" },
+          { "label" : "Analyze Invoices", "id" : "invoices", "icon" : "px-fea:templates" }
+        ]}
+      ]'
+      vertical
+      selected="{{selectedItem}}"
+      selected-route="{{selectedRoute}}"
+      vertical-opened="{{verticalOpened}}">
+    <div slot="actions" class="actions">
+      <px-product-switcher
+        id="switcher"
+        style="position:absolute;bottom:15px;left:15px;"
+        horizontal-align="left"
+        vertical-align="bottom"
+        items='[{"key":"1","val":"Application 1","icon":"px-nav:favorite"},{"key":"2","val":"Application 2","icon":"px-nav:compare"},{"key":"3","val":"Application 3","icon":"px-nav:hierarchy"}]'>
+        <div slot="header" style="padding:20px;display:flex;align-items:center;">
+          <img src="Predix.png" / style="height:15px;margin-right:5px;">Suite
+        </div>
+        <div slot="footer" style="padding:20px;text-align:right;">
+          <a href="#" style="text-decoration:none;color:#45ACE5;">Contact us</a>
+        </div>
+      </px-product-switcher>
+    </div>
+  </px-app-nav>
+  <px-product-switcher
+    id="switcher"
+    style="position:absolute;top:30px;right:30px;"
+    horizontal-align="right"
+    vertical-align="top"
+    items='[{"key":"1","val":"Application 1 has a very very very long title","icon":"px-nav:favorite"},{"key":"2","val":"Application 2","icon":"px-nav:compare"},{"key":"3","val":"Application 3","icon":"px-nav:hierarchy"},{"key":"4","val":"Application 4","icon":"px-nav:notification"},{"key":"5","val":"Application 5","icon":"px-nav:notification"},{"key":"6","val":"Application 6","icon":"px-nav:notification"},{"key":"7","val":"Application 7","icon":"px-nav:notification"},{"key":"8","val":"Application 8","icon":"px-nav:notification"},{"key":"9","val":"Application 9","icon":"px-nav:notification"},{"key":"10","val":"Application 10","icon":"px-nav:notification"},{"key":"11","val":"Application 11","icon":"px-nav:notification"}]'>
+    <div slot="header" style="padding:20px;display:flex;align-items:center;">
+      <img src="Predix.png" / style="height:15px;margin-right:5px;">Suite
+    </div>
+    <div slot="footer" style="padding:20px;text-align:right;">
+      <a href="#" style="text-decoration:none;color:#45ACE5;">Contact us</a>
+    </div>
+  </px-product-switcher>
+</body>
+
+</html>

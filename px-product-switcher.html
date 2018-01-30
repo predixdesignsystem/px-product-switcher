@@ -1,0 +1,127 @@
+<link rel="import" href="../polymer/polymer.html"/>
+<link rel="import" href="../px-dropdown/px-dropdown.html"/>
+<link rel="import" href="css/px-product-switcher-styles.html">
+
+<!--
+Px-product-switcher is a navigation component for switching between products or applications, a level above the standard px-app-nav for navigation within an application.
+
+### Usage
+
+    <px-product-switcher
+      items='[{"key":"1","val":"Application 1","icon":"px-nav:favorite"}]'
+      horizontal-align="left"
+      vertical-align="bottom">
+      <div slot="header"> Content for the top of the list </div>
+      <div slot="footer"> Content for the bottom of the list </div>
+    </px-product-switcher>
+
+@element px-product-switcher
+@blurb Px-product-switcher is a navigation component for switching between products or applications.
+@homepage index.html
+@demo index.html
+-->
+
+<dom-module id="px-product-switcher">
+  <template>
+    <style include="px-product-switcher-styles"></style>
+
+    <px-dropdown
+      id="switcher"
+      horizontal-align="{{horizontalAlign}}"
+      vertical-align="{{verticalAlign}}"
+      items="{{items}}"
+      opened="{{opened}}"
+      disable-dynamic-align
+      show-caret
+      hide-mobile-buttons>
+      <px-icon style="color: #2C404C;padding:0 5px;outline:none;" icon="px-nav:tile-view" slot="trigger" tabindex="0"></px-icon>
+      <slot name="header" slot="header"></slot>
+      <slot name="footer" slot="footer"></slot>
+
+    </px-dropdown>
+
+  </template>
+</dom-module>
+
+<script>
+  Polymer({
+    is: 'px-product-switcher',
+    listeners: {
+      'iron-select' : '_handleSelection'
+    },
+    properties: {
+      /**
+       * An array that contains the list of items which show up in the switcher.
+       * Each item is an object consisting of:
+       * * 'key' - a unique identifier (number or string)
+       * * 'val' - the actual text that is displayed
+       * * 'icon' - an icon name from the px-icon-set to display next to the item (optional)
+       */
+       items: {
+        type: Array,
+        notify: true,
+        value: function () {
+          return [];
+        }
+      },
+      /**
+       * A flag which reflects if the product switcher trigger has been clicked or not.
+       */
+       opened: {
+        type: Boolean,
+        notify: true,
+        value: false
+      },
+      /**
+      * Horizontal alignment of the dropdown relative to the trigger.
+      * Should be one of `left` or `right` where `left` means that the dropdown
+      * and trigger are aligned on their left side, so the dropdown will extend _to the right_.
+      */
+      horizontalAlign: {
+        type: String,
+        value: 'left'
+      },
+      /**
+      * Vertical alignment of the dropdown relative to the trigger.
+      * Should be one of `top` or `bottom` where `top` means that the dropdown
+      * and trigger are aligned at the top, so the dropdown will extend _below_ the trigger.
+      */
+      verticalAlign: {
+        type: String,
+        value: 'top'
+      }
+    },
+    /**
+     * Opens the switcher when the trigger is pressed.
+     */
+     toggle: function() {
+      this.$.switcher.toggle();
+    },
+    /**
+    * Calculates class to use for product switcher.
+    */
+    _getClass: function(opened) {
+      return this.$.switcher.verticalAlign + ' ' + this.$.switcher.horizontalAlign;
+    },
+    /**
+    * Handles the selection from px-dropdown.
+    * Fires an event and closes the dropdown.
+    */
+    _handleSelection: function(evt) {
+      this.$.switcher.close();
+      /**
+       * Event fired when a product is selected from the switcher.
+       * `evt.detail` contains:
+       * ```
+       * { key: "id of the selected product",
+       *   val: "label for the selected product"}
+       * ```
+       * @event px-product-switcher-changed
+       */
+      this.fire('px-product-switcher-changed', {
+        key: evt.detail.item.key,
+        val: evt.detail.item.val
+      });
+    }
+  });
+</script>

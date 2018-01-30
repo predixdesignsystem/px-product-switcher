@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0.0",
+  "elements": [
+    {
+      "description": "Px-product-switcher is a navigation component for switching between products or applications, a level above the standard px-app-nav for navigation within an application.\n\n### Usage\n\n    <px-product-switcher\n      items='[{\"key\":\"1\",\"val\":\"Application 1\",\"icon\":\"px-nav:favorite\"}]'\n      horizontal-align=\"left\"\n      vertical-align=\"top\">\n      <div slot=\"header\"> Content for the top of the list </div>\n      <div slot=\"footer\"> Content for the bottom of the list </div>\n    </px-product-switcher>",
+      "summary": "",
+      "path": "px-product-switcher.html",
+      "properties": [
+        {
+          "name": "items",
+          "type": "Array",
+          "description": "An array that contains the list of items which show up in the switcher.\nEach item is an object consisting of:\n* 'key' - a unique identifier (number or string)\n* 'val' - the actual text that is displayed\n* 'icon' - an icon name from the px-icon-set to display next to the item (optional)",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 58,
+              "column": 7
+            },
+            "end": {
+              "line": 64,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true
+            }
+          },
+          "defaultValue": "[]"
+        },
+        {
+          "name": "opened",
+          "type": "boolean",
+          "description": "A flag which reflects if the product switcher trigger has been clicked or not.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 68,
+              "column": 7
+            },
+            "end": {
+              "line": 72,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {
+              "notify": true
+            }
+          },
+          "defaultValue": "false"
+        },
+        {
+          "name": "horizontalAlign",
+          "type": "string",
+          "description": "Horizontal alignment of the dropdown relative to the trigger.\nShould be one of `left` or `right` where `left` means that the dropdown\nand trigger are aligned on their left side, so the dropdown will extend _to the right_.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 78,
+              "column": 6
+            },
+            "end": {
+              "line": 81,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"left\""
+        },
+        {
+          "name": "verticalAlign",
+          "type": "string",
+          "description": "Vertical alignment of the dropdown relative to the trigger.\nShould be one of `top` or `bottom` where `top` means that the dropdown\nand trigger are aligned at the top, so the dropdown will extend _below_ the trigger.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 87,
+              "column": 6
+            },
+            "end": {
+              "line": 90,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"bottom\""
+        }
+      ],
+      "methods": [
+        {
+          "name": "toggle",
+          "description": "Opens the switcher when the trigger is pressed.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 95,
+              "column": 5
+            },
+            "end": {
+              "line": 97,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": []
+        },
+        {
+          "name": "_getClass",
+          "description": "Calculates class to use for product switcher.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 101,
+              "column": 4
+            },
+            "end": {
+              "line": 103,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "opened"
+            }
+          ]
+        },
+        {
+          "name": "_handleSelection",
+          "description": "Handles the selection from px-dropdown.\nFires an event and closes the dropdown.",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 108,
+              "column": 4
+            },
+            "end": {
+              "line": 123,
+              "column": 5
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "evt"
+            }
+          ]
+        }
+      ],
+      "staticMethods": [],
+      "demos": [
+        {
+          "url": "index.html",
+          "description": ""
+        }
+      ],
+      "metadata": {},
+      "sourceRange": {
+        "start": {
+          "line": 45,
+          "column": 10
+        },
+        "end": {
+          "line": 124,
+          "column": 3
+        }
+      },
+      "privacy": "public",
+      "superclass": "HTMLElement",
+      "attributes": [
+        {
+          "name": "items",
+          "description": "An array that contains the list of items which show up in the switcher.\nEach item is an object consisting of:\n* 'key' - a unique identifier (number or string)\n* 'val' - the actual text that is displayed\n* 'icon' - an icon name from the px-icon-set to display next to the item (optional)",
+          "sourceRange": {
+            "start": {
+              "line": 58,
+              "column": 7
+            },
+            "end": {
+              "line": 64,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "Array"
+        },
+        {
+          "name": "opened",
+          "description": "A flag which reflects if the product switcher trigger has been clicked or not.",
+          "sourceRange": {
+            "start": {
+              "line": 68,
+              "column": 7
+            },
+            "end": {
+              "line": 72,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "boolean"
+        },
+        {
+          "name": "horizontal-align",
+          "description": "Horizontal alignment of the dropdown relative to the trigger.\nShould be one of `left` or `right` where `left` means that the dropdown\nand trigger are aligned on their left side, so the dropdown will extend _to the right_.",
+          "sourceRange": {
+            "start": {
+              "line": 78,
+              "column": 6
+            },
+            "end": {
+              "line": 81,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "string"
+        },
+        {
+          "name": "vertical-align",
+          "description": "Vertical alignment of the dropdown relative to the trigger.\nShould be one of `top` or `bottom` where `top` means that the dropdown\nand trigger are aligned at the top, so the dropdown will extend _below_ the trigger.",
+          "sourceRange": {
+            "start": {
+              "line": 87,
+              "column": 6
+            },
+            "end": {
+              "line": 90,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "string"
+        }
+      ],
+      "events": [
+        {
+          "type": "CustomEvent",
+          "name": "px-product-switcher-changed",
+          "description": "px-product-switcher-changed",
+          "metadata": {}
+        },
+        {
+          "type": "CustomEvent",
+          "name": "items-changed",
+          "description": "Fired when the `items` property changes.",
+          "metadata": {}
+        },
+        {
+          "type": "CustomEvent",
+          "name": "opened-changed",
+          "description": "Fired when the `opened` property changes.",
+          "metadata": {}
+        }
+      ],
+      "styling": {
+        "cssVariables": [],
+        "selectors": []
+      },
+      "slots": [
+        {
+          "description": "",
+          "name": "header",
+          "range": {
+            "file": "px-product-switcher.html",
+            "start": {
+              "line": 36,
+              "column": 6
+            },
+            "end": {
+              "line": 36,
+              "column": 47
+            }
+          }
+        },
+        {
+          "description": "",
+          "name": "footer",
+          "range": {
+            "file": "px-product-switcher.html",
+            "start": {
+              "line": 37,
+              "column": 6
+            },
+            "end": {
+              "line": 37,
+              "column": 47
+            }
+          }
+        }
+      ],
+      "tagname": "px-product-switcher"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Component Test : Fixture for px-product-switcher</title>
+
+    <!-- Requires Webcomponents.js polyfill is provided by the page for browsers that don't support html imports -->
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <!-- web-component-tester automatically provides local copy of brower.js below
+         for any URL ending with "/web-component-tester/browser.js"
+         when wct is run from the command line -->
+    <script src="../../web-component-tester/browser.js"></script>
+    <link rel="import" href="../px-product-switcher.html" />
+    <!-- Retain this link for px-theme.html -->
+    <!-- px-theme is needed for WCT to run without errors -->
+    <link rel="import" href="../../px-theme/px-theme-styles.html"/>
+    <!-- This script link will contain the generated script stub for custom, developer-added test cases -->
+    <script src="px-product-switcher-tests.js"></script>
+    <custom-style>
+      <style include="px-theme-styles" is="custom-style"></style>
+    </custom-style>
+  </head>
+
+  <body>
+    <test-fixture id="px-product-switcher-fixture">
+      <template>
+        <px-product-switcher></px-product-switcher>
+      </template>
+    </test-fixture>
+  </body>
+</html>
