@@ -10,7 +10,6 @@ suite('Custom Automation Tests for px-product-switcher', () => {
   });
 
   test('Internal dropdown has right # of items', done => {
-    debugger;
     let length = switcherFixture.items.length;
     assert.equal(length, 3);
     let dropdown = Polymer.dom(switcherFixture.root).querySelector('#switcher');
