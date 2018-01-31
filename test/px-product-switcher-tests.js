@@ -1,23 +1,22 @@
-// This is the placeholder suite to place custom tests in
-// Use testCase(options) for a more convenient setup of the test cases
 suite('Custom Automation Tests for px-product-switcher', () => {
-  test('Check initial value of counter', done => {
-    let counterEl = fixture('px-product-switcher-fixture'),
-        counterValueEl = Polymer.dom(counterEl.root).querySelector('span');
-    debugger;
-    assert.equal(counterValueEl.textContent, '0');
-    done();
-  });
+  let switcherFixture;
 
-  test('Clicking px-product-switcher increments the counter', done => {
-    let counterEl = fixture('px-product-switcher-fixture'),
-        counterValueEl = Polymer.dom(counterEl.root).querySelector('span');
-    assert.equal(counterValueEl.textContent, '0');
-
-    counterEl.click();
-    flush(function(){
-      assert.equal(counterValueEl.textContent, '1');
+  setup((done)=> {
+    switcherFixture = fixture('px-product-switcher-fixture');
+    switcherFixture.toggle();
+    flush(()=>{
+      done();
     });
+  });
+
+  test('Internal dropdown has right # of items', done => {
+    debugger;
+    let length = switcherFixture.items.length;
+    assert.equal(length, 3);
+    let dropdown = Polymer.dom(switcherFixture.root).querySelector('#switcher');
+    let dropdownLength = dropdown.items.length;
+    assert.equal(dropdownLength, 3);
     done();
   });
+
 });

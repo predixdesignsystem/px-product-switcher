@@ -25,7 +25,11 @@
   <body>
     <test-fixture id="px-product-switcher-fixture">
       <template>
-        <px-product-switcher></px-product-switcher>
+        <px-product-switcher
+          horizontal-align="left"
+          vertical-align="top"
+          items='[{"key":"1","val":"Application 1","icon":"px-nav:favorite"},{"key":"2","val":"Application 2","icon":"px-nav:compare"},{"key":"3","val":"Application 3","icon":"px-nav:hierarchy"}]'>
+        </px-product-switcher>
       </template>
     </test-fixture>
   </body>
