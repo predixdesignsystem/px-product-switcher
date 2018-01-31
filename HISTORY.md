@@ -1,3 +1,7 @@
+v1.0.2
+==================
+* update api link
+
 v1.0.1
 ==================
 * add device flags
