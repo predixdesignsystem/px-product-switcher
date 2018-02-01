@@ -2,3 +2,5 @@ node_modules
 bower_components*
 .DS_Store
 .vscode
+bower-*.json
+monogram-wdmk.png

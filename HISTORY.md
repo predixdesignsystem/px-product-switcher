@@ -1,3 +1,7 @@
+v1.0.4
+==================
+* design review feedback
+
 v1.0.3
 ==================
 * remove debugger

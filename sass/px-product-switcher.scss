@@ -33,6 +33,15 @@
   --px-dropdown-bg-color--selected: var(--px-product-switcher-background-color--selected, #09819C);
   --px-dropdown-bg-color--selected--mobile: var(--px-product-switcher-background-color--selected--mobile, #1B2A33);
   --px-dropdown-max-height: 40rem;
+  --px-dropdown-min-width: 19.3333rem;
+}
+:host([mobile]) {
+  --px-dropdown-min-width: 0;
+}
+.trigger {
+  color: var(--px-base-text-color, #B6C3CC);
+  padding:0 5px;
+  outline:none;
 }
 
 // Trumps

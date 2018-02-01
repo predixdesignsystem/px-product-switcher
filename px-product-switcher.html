@@ -27,14 +27,17 @@ Px-product-switcher is a navigation component for switching between products or 
 
     <px-dropdown
       id="switcher"
+      class="dropdown"
       horizontal-align="{{horizontalAlign}}"
       vertical-align="{{verticalAlign}}"
       items="{{items}}"
       opened="{{opened}}"
+      mobile="{{mobile}}"
+      mobile-at="{{mobileAt}}"
       disable-dynamic-align
       show-caret
       hide-mobile-buttons>
-      <px-icon style="color: #2C404C;padding:0 5px;outline:none;" icon="px-nav:tile-view" slot="trigger" tabindex="0"></px-icon>
+      <px-icon class="trigger" icon="px-nav:tile-view" slot="trigger" tabindex="0"></px-icon>
       <slot name="header" slot="header"></slot>
       <slot name="footer" slot="footer"></slot>
 
@@ -89,6 +92,22 @@ Px-product-switcher is a navigation component for switching between products or 
       verticalAlign: {
         type: String,
         value: 'top'
+      },
+      /**
+      * Whether the product switcher should display in a mobile configuration.
+      * Automatically calculated based on the breakpoint in `mobileAt`.
+      */
+      mobile: {
+        type: Boolean,
+        value: false,
+        reflectToAttribute: true
+      },
+      /**
+      * Value (in pixels) at which to switch to the mobile configuration.
+      */
+      mobileAt: {
+        type: Number,
+        value: 400
       }
     },
     /**

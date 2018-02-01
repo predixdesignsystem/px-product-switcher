@@ -1,6 +1,6 @@
 {
   "name": "px-product-switcher",
-  "version": "0.0.1",
+  "version": "1.0.3",
   "main": [
     "px-product-switcher.html"
   ],
@@ -23,12 +23,14 @@
     "*.enc"
   ],
   "dependencies": {
-    "polymer": "^1.9.0"
+    "polymer": "^1.9.0",
+    "px-dropdown": "^4.4.1"
   },
   "devDependencies": {
     "px-demo": "^3.0.0",
     "px-theme": "^3.0.0",
-    "web-component-tester": "^5.0.0"
+    "web-component-tester": "^5.0.0",
+    "px-app-nav": "^2.1.5"
   },
   "resolutions": {
     "webcomponentsjs": "^0.7.0"

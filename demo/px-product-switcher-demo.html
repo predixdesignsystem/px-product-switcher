@@ -45,8 +45,9 @@
           items="{{props.items.value}}"
           selected="{{props.selected.value}}"
           horizontal-align="{{props.horizontalAlign.value}}"
-          vertical-align="{{props.verticalAlign.value}}">
-          <div slot="header" style="padding:20px;display:flex;align-items:middle;"><img src="[[importPath]]Predix.png" style="height:15px;margin-right:5px;"/>Suite</div>
+          vertical-align="{{props.verticalAlign.value}}"
+          mobile="{{props.mobile.value}}">
+          <div slot="header" style="padding:20px;display:flex;align-items:center;"><img src="[[importPath]]Predix.png" style="height:15px;margin-right:5px;"/>Suite</div>
           <div slot="footer" style="padding:20px;text-align:right;"><a href="#" style="text-decoration:none;color:#45ACE5;">Contact us</a></div>
         </px-product-switcher>
       </px-demo-component>
@@ -116,6 +117,11 @@
         defaultValue: 'top',
         inputType: 'dropdown',
         inputChoices: ['top','bottom']
+      },
+      mobile: {
+        type: Boolean,
+        defaultValue: false,
+        inputType: 'toggle'
       }
     }
   });
