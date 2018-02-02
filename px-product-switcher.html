@@ -37,7 +37,7 @@ Px-product-switcher is a navigation component for switching between products or 
       disable-dynamic-align
       show-caret
       hide-mobile-buttons>
-      <px-icon class="trigger" icon="px-nav:tile-view" slot="trigger" tabindex="0"></px-icon>
+      <px-icon class="trigger" icon="{{icon}}" slot="trigger" tabindex="0"></px-icon>
       <slot name="header" slot="header"></slot>
       <slot name="footer" slot="footer"></slot>
 
@@ -108,6 +108,13 @@ Px-product-switcher is a navigation component for switching between products or 
       mobileAt: {
         type: Number,
         value: 400
+      },
+      /**
+      * Icon to be used as the invoking trigger element for the product switcher.
+      */
+      icon: {
+        type: String,
+        value: 'px-nav:list-view'
       }
     },
     /**

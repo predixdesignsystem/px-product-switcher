@@ -129,6 +129,26 @@
             "polymer": {}
           },
           "defaultValue": "400"
+        },
+        {
+          "name": "icon",
+          "type": "string",
+          "description": "Icon to be used as the invoking trigger element for the product switcher.",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 114,
+              "column": 6
+            },
+            "end": {
+              "line": 117,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"px-nav:list-view\""
         }
       ],
       "methods": [
@@ -138,11 +158,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 115,
+              "line": 122,
               "column": 5
             },
             "end": {
-              "line": 117,
+              "line": 124,
               "column": 5
             }
           },
@@ -155,11 +175,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 121,
+              "line": 128,
               "column": 4
             },
             "end": {
-              "line": 123,
+              "line": 130,
               "column": 5
             }
           },
@@ -176,11 +196,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 128,
+              "line": 135,
               "column": 4
             },
             "end": {
-              "line": 143,
+              "line": 150,
               "column": 5
             }
           },
@@ -206,7 +226,7 @@
           "column": 10
         },
         "end": {
-          "line": 144,
+          "line": 151,
           "column": 3
         }
       },
@@ -308,6 +328,22 @@
           },
           "metadata": {},
           "type": "number"
+        },
+        {
+          "name": "icon",
+          "description": "Icon to be used as the invoking trigger element for the product switcher.",
+          "sourceRange": {
+            "start": {
+              "line": 114,
+              "column": 6
+            },
+            "end": {
+              "line": 117,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "string"
         }
       ],
       "events": [

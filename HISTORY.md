@@ -1,3 +1,7 @@
+v1.0.6
+==================
+* update icon, make configurable
+
 v1.0.5
 ==================
 * update simple demo
