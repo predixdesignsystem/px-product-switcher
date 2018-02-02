@@ -1,3 +1,7 @@
+v1.0.5
+==================
+* update simple demo
+
 v1.0.4
 ==================
 * design review feedback

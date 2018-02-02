@@ -30,10 +30,9 @@
       selected="{{selectedItem}}"
       selected-route="{{selectedRoute}}"
       vertical-opened="{{verticalOpened}}">
-    <div slot="actions" class="actions">
+    <div slot="actions" class="actions" style="display:flex;padding:15px;">
       <px-product-switcher
         id="switcher"
-        style="position:absolute;bottom:15px;left:15px;"
         horizontal-align="left"
         vertical-align="bottom"
         items='[{"key":"1","val":"Application 1","icon":"px-nav:favorite"},{"key":"2","val":"Application 2","icon":"px-nav:compare"},{"key":"3","val":"Application 3","icon":"px-nav:hierarchy"}]'>
@@ -44,6 +43,9 @@
           <a href="#" style="text-decoration:none;color:#45ACE5;">Contact us</a>
         </div>
       </px-product-switcher>
+      <px-icon icon="px-nav:generic-user" style="color:#B6C3CC;margin-left:15px;"></px-icon>
+      <px-icon icon="px-nav:search" style="color:#B6C3CC;margin-left:15px;"></px-icon>
+      <px-icon icon="px-utl:app-settings" style="color:#B6C3CC;margin-left:15px;--iron-icon-height:22px;--iron-icon-width:22px;"></px-icon>
     </div>
   </px-app-nav>
   <px-product-switcher
