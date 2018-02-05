@@ -1,3 +1,7 @@
+v1.0.7
+==================
+* change from two-way to one-way binding
+
 v1.0.6
 ==================
 * update icon, make configurable

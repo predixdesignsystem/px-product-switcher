@@ -28,16 +28,16 @@ Px-product-switcher is a navigation component for switching between products or 
     <px-dropdown
       id="switcher"
       class="dropdown"
-      horizontal-align="{{horizontalAlign}}"
-      vertical-align="{{verticalAlign}}"
-      items="{{items}}"
-      opened="{{opened}}"
-      mobile="{{mobile}}"
-      mobile-at="{{mobileAt}}"
+      horizontal-align="[[horizontalAlign]]"
+      vertical-align="[[verticalAlign]]"
+      items="[[items]]"
+      opened="[[opened]]"
+      mobile="[[mobile]]"
+      mobile-at="[[mobileAt]]"
       disable-dynamic-align
       show-caret
       hide-mobile-buttons>
-      <px-icon class="trigger" icon="{{icon}}" slot="trigger" tabindex="0"></px-icon>
+      <px-icon class="trigger" icon="[[icon]]" slot="trigger" tabindex="0"></px-icon>
       <slot name="header" slot="header"></slot>
       <slot name="footer" slot="footer"></slot>
 
