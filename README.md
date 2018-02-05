@@ -31,7 +31,13 @@ Second, import the component to your application with the following tag in your 
 Finally, use the component in your application:
 
 ```
-Insert Your demo code here.
+<px-product-switcher
+  items='[{"key":"1","val":"Application 1","icon":"px-nav:favorite"}]'
+  horizontal-align="left"
+  vertical-align="bottom">
+  <div slot="header"> Content for the top of the list </div>
+  <div slot="footer"> Content for the bottom of the list </div>
+</px-product-switcher>
 ```
 
 <br />
