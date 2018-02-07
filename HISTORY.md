@@ -1,3 +1,7 @@
+v1.0.8
+==================
+* fix #1
+
 v1.0.7
 ==================
 * change from two-way to one-way binding

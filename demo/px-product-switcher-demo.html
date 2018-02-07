@@ -41,7 +41,6 @@
       <!-- Component ---------------------------------------------------------->
       <px-demo-component slot="px-demo-component">
         <px-product-switcher
-          class="{{props.horizontalAlign.value}}"
           items="{{props.items.value}}"
           selected="{{props.selected.value}}"
           horizontal-align="{{props.horizontalAlign.value}}"
@@ -88,7 +87,7 @@
               configReset: true
             },
             { configName: "Many items",
-              items: [{"key":"1","val":"Application 1","icon":"px-nav:favorite"},{"key":"2","val":"Application 2","icon":"px-nav:compare"},{"key":"3","val":"Application 3","icon":"px-nav:hierarchy"},{"key":"4","val":"Application 4","icon":"px-nav:notification"},{"key":"5","val":"Application 5","icon":"px-nav:favorite"},{"key":"6","val":"Application 6","icon":"px-nav:compare"},{"key":"7","val":"Application 7","icon":"px-nav:hierarchy"},{"key":"8","val":"Application 8","icon":"px-nav:notification"},{"key":"9","val":"Application 9","icon":"px-nav:favorite"},{"key":"10","val":"Application 10","icon":"px-nav:compare"},{"key":"11","val":"Application 11","icon":"px-nav:hierarchy"},{"key":"12","val":"Application 12","icon":"px-nav:notification"}],
+              items: [{"key":"app1","val":"Application 1","icon":"px-nav:favorite"},{"key":"app2","val":"Application 2","icon":"px-nav:compare"},{"key":"app3","val":"Application 3","icon":"px-nav:hierarchy"},{"key":"app4","val":"Application 4","icon":"px-nav:notification"},{"key":"app5","val":"Application 5","icon":"px-nav:favorite"},{"key":"app6","val":"Application 6","icon":"px-nav:compare"},{"key":"app7","val":"Application 7","icon":"px-nav:hierarchy"},{"key":"app8","val":"Application 8","icon":"px-nav:notification"},{"key":"app9","val":"Application 9","icon":"px-nav:favorite"},{"key":"app10","val":"Application 10","icon":"px-nav:compare"},{"key":"app11","val":"Application 11","icon":"px-nav:hierarchy"},{"key":"app12","val":"Application 12","icon":"px-nav:notification"}],
               selected: 'app5'
             }
           ]
@@ -99,7 +98,7 @@
     demoProps: {
       items: {
         type: Array,
-        defaultValue: [{"key":"1","val":"Application 1","icon":"px-nav:favorite"},{"key":"2","val":"Application 2","icon":"px-nav:compare"},{"key":"3","val":"Application 3","icon":"px-nav:hierarchy"},{"key":"4","val":"Application 4","icon":"px-nav:notification"}],
+        defaultValue: [{"key":"app1","val":"Application 1","icon":"px-nav:favorite"},{"key":"app2","val":"Application 2","icon":"px-nav:compare"},{"key":"app3","val":"Application 3","icon":"px-nav:hierarchy"},{"key":"app4","val":"Application 4","icon":"px-nav:notification"}],
         inputType: 'code:JSON'
       },
       selected: {

@@ -31,9 +31,10 @@ Px-product-switcher is a navigation component for switching between products or 
       horizontal-align="[[horizontalAlign]]"
       vertical-align="[[verticalAlign]]"
       items="[[items]]"
-      opened="[[opened]]"
-      mobile="[[mobile]]"
+      opened="{{opened}}"
+      mobile="{{mobile}}"
       mobile-at="[[mobileAt]]"
+      selected="{{selected}}"
       disable-dynamic-align
       show-caret
       hide-mobile-buttons>
@@ -115,6 +116,14 @@ Px-product-switcher is a navigation component for switching between products or 
       icon: {
         type: String,
         value: 'px-nav:list-view'
+      },
+      /**
+      * Key of the item selected in the product switcher.
+      */
+      selected: {
+        type: String,
+        value: '',
+        notify: true
       }
     },
     /**
@@ -134,7 +143,7 @@ Px-product-switcher is a navigation component for switching between products or 
     * Fires an event and closes the dropdown.
     */
     _handleSelection: function(evt) {
-      this.$.switcher.close();
+      this.$.switcher.opened = false;
       /**
        * Event fired when a product is selected from the switcher.
        * `evt.detail` contains:
