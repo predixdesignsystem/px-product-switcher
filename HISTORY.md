@@ -1,3 +1,7 @@
+v1.0.10
+==================
+* Fix demo for IE
+
 v1.0.9
 ==================
 * add unit test coverage
