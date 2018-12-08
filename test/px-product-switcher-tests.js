@@ -35,11 +35,13 @@ suite('Custom Automation Tests for px-product-switcher', () => {
     done();
   });
 
-  test('Selecting an item causes the event to fire and closes the switcher', done => {
-    let dropdown = Polymer.dom(switcherFixture.root).querySelector('px-dropdown'),
-        ironDropdown = Polymer.dom(dropdown.root).querySelector('iron-dropdown'),
-        option = Polymer.dom(ironDropdown).querySelectorAll('.dropdown-option')[0],
-        count = 0;
+  test("Selecting an item causes the event to fire and closes the switcher", done => {
+    let dropdownContent = Polymer.dom(switcherFixture.root)
+        .querySelector("px-dropdown")
+        .root.querySelector("px-dropdown-content"),
+      ironDropdown = dropdownContent.root.querySelector("iron-dropdown"),
+      option = ironDropdown.querySelector(".dropdown-option"),
+      count = 0;
 
     switcherFixture.addEventListener('px-product-switcher-changed', function() {
       count++;

@@ -8,7 +8,7 @@
       "properties": [
         {
           "name": "items",
-          "type": "Array",
+          "type": "Array | null | undefined",
           "description": "An array that contains the list of items which show up in the switcher.\nEach item is an object consisting of:\n* 'key' - a unique identifier (number or string)\n* 'val' - the actual text that is displayed\n* 'icon' - an icon name from the px-icon-set to display next to the item (optional)",
           "privacy": "public",
           "sourceRange": {
@@ -23,14 +23,15 @@
           },
           "metadata": {
             "polymer": {
-              "notify": true
+              "notify": true,
+              "attributeType": "Array"
             }
           },
           "defaultValue": "[]"
         },
         {
           "name": "opened",
-          "type": "boolean",
+          "type": "boolean | null | undefined",
           "description": "A flag which reflects if the product switcher trigger has been clicked or not.",
           "privacy": "public",
           "sourceRange": {
@@ -45,14 +46,15 @@
           },
           "metadata": {
             "polymer": {
-              "notify": true
+              "notify": true,
+              "attributeType": "Boolean"
             }
           },
           "defaultValue": "false"
         },
         {
           "name": "horizontalAlign",
-          "type": "string",
+          "type": "string | null | undefined",
           "description": "Horizontal alignment of the dropdown relative to the trigger.\nShould be one of `left` or `right` where `left` means that the dropdown\nand trigger are aligned on their left side, so the dropdown will extend _to the right_.",
           "privacy": "public",
           "sourceRange": {
@@ -66,13 +68,15 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "String"
+            }
           },
           "defaultValue": "\"left\""
         },
         {
           "name": "verticalAlign",
-          "type": "string",
+          "type": "string | null | undefined",
           "description": "Vertical alignment of the dropdown relative to the trigger.\nShould be one of `top` or `bottom` where `top` means that the dropdown\nand trigger are aligned at the top, so the dropdown will extend _below_ the trigger.",
           "privacy": "public",
           "sourceRange": {
@@ -86,13 +90,15 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "String"
+            }
           },
           "defaultValue": "\"top\""
         },
         {
           "name": "mobile",
-          "type": "boolean",
+          "type": "boolean | null | undefined",
           "description": "Whether the product switcher should display in a mobile configuration.\nAutomatically calculated based on the breakpoint in `mobileAt`.",
           "privacy": "public",
           "sourceRange": {
@@ -106,13 +112,15 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "Boolean"
+            }
           },
           "defaultValue": "false"
         },
         {
           "name": "mobileAt",
-          "type": "number",
+          "type": "number | null | undefined",
           "description": "Value (in pixels) at which to switch to the mobile configuration.",
           "privacy": "public",
           "sourceRange": {
@@ -126,13 +134,15 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "Number"
+            }
           },
           "defaultValue": "400"
         },
         {
           "name": "icon",
-          "type": "string",
+          "type": "string | null | undefined",
           "description": "Icon to be used as the invoking trigger element for the product switcher.",
           "privacy": "public",
           "sourceRange": {
@@ -146,13 +156,15 @@
             }
           },
           "metadata": {
-            "polymer": {}
+            "polymer": {
+              "attributeType": "String"
+            }
           },
           "defaultValue": "\"px-nav:list-view\""
         },
         {
           "name": "selected",
-          "type": "string",
+          "type": "string | null | undefined",
           "description": "Key of the item selected in the product switcher.",
           "privacy": "public",
           "sourceRange": {
@@ -167,7 +179,8 @@
           },
           "metadata": {
             "polymer": {
-              "notify": true
+              "notify": true,
+              "attributeType": "String"
             }
           },
           "defaultValue": "\"\""
@@ -189,7 +202,10 @@
             }
           },
           "metadata": {},
-          "params": []
+          "params": [],
+          "return": {
+            "type": "void"
+          }
         },
         {
           "name": "_getClass",
@@ -231,7 +247,10 @@
             {
               "name": "evt"
             }
-          ]
+          ],
+          "return": {
+            "type": "void"
+          }
         }
       ],
       "staticMethods": [],
@@ -269,7 +288,7 @@
             }
           },
           "metadata": {},
-          "type": "Array"
+          "type": "Array | null | undefined"
         },
         {
           "name": "opened",
@@ -285,7 +304,7 @@
             }
           },
           "metadata": {},
-          "type": "boolean"
+          "type": "boolean | null | undefined"
         },
         {
           "name": "horizontal-align",
@@ -301,7 +320,7 @@
             }
           },
           "metadata": {},
-          "type": "string"
+          "type": "string | null | undefined"
         },
         {
           "name": "vertical-align",
@@ -317,7 +336,7 @@
             }
           },
           "metadata": {},
-          "type": "string"
+          "type": "string | null | undefined"
         },
         {
           "name": "mobile",
@@ -333,7 +352,7 @@
             }
           },
           "metadata": {},
-          "type": "boolean"
+          "type": "boolean | null | undefined"
         },
         {
           "name": "mobile-at",
@@ -349,7 +368,7 @@
             }
           },
           "metadata": {},
-          "type": "number"
+          "type": "number | null | undefined"
         },
         {
           "name": "icon",
@@ -365,7 +384,7 @@
             }
           },
           "metadata": {},
-          "type": "string"
+          "type": "string | null | undefined"
         },
         {
           "name": "selected",
@@ -381,14 +400,14 @@
             }
           },
           "metadata": {},
-          "type": "string"
+          "type": "string | null | undefined"
         }
       ],
       "events": [
         {
           "type": "CustomEvent",
           "name": "px-product-switcher-changed",
-          "description": "px-product-switcher-changed",
+          "description": "Event fired when a product is selected from the switcher.\n`evt.detail` contains:\n```\n{ key: \"id of the selected product\",\n  val: \"label for the selected product\"}\n```",
           "metadata": {}
         },
         {
@@ -419,7 +438,6 @@
           "description": "",
           "name": "header",
           "range": {
-            "file": "px-product-switcher.html",
             "start": {
               "line": 57,
               "column": 6
@@ -434,7 +452,6 @@
           "description": "",
           "name": "footer",
           "range": {
-            "file": "px-product-switcher.html",
             "start": {
               "line": 58,
               "column": 6
