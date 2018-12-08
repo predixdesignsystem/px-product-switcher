@@ -1,3 +1,8 @@
+v1.0.11
+==================
+* Added focus color for trigger icon (thanks [@benjaminliugang](https://github.com/benjaminliugang))
+* Fixed unit test failures
+
 v1.0.10
 ==================
 * Fix demo for IE
