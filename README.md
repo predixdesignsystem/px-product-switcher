@@ -1,4 +1,4 @@
-# px-product-switcher
+# px-product-switcher [![Build Status](https://travis-ci.org/predixdesignsystem/px-product-switcher.svg?branch=master)](https://travis-ci.org/predixdesignsystem/px-product-switcher)
 
 ## Overview
 
